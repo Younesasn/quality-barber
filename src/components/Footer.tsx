@@ -1,16 +1,7 @@
 import {
     InstagramLogoIcon,
   } from "@radix-ui/react-icons";
-
-type Link = {
-  text: string;
-  url: string;
-};
-
-const links: Link[] = [
-  { text: "About", url: "#" },
-  { text: "Services", url: "#" },
-];
+import { Avatars } from "./Avatars";
 
 interface Icon {
   icon: JSX.Element;
@@ -35,27 +26,8 @@ export function Footer() {
               Quality Barber
             </h2>
         </div>
-
-        {/* <ul className="flex items-center justify-center gap-x-5">
-          {links.map((link, index) => (
-            <li
-              key={index}
-              className="text-[15px]/normal font-medium text-neutral-400 transition-all duration-100 ease-linear hover:text-neutral-900 hover:underline hover:underline-offset-4 dark:font-medium dark:text-neutral-400 hover:dark:text-neutral-100"
-            >
-              <a href={link.url}>{link.text}</a>
-            </li>
-          ))}
-        </ul> */}
         <div className="flex items-center gap-x-4">
-          {icons.map((icon, index) => (
-            <a
-              key={index}
-              href={icon.url}
-              className="text-neutral-500 hover:text-white text-xl"
-            >
-              {icon.icon}
-            </a>
-          ))}
+          <Avatars />
         </div>
       </div>
     </footer>
