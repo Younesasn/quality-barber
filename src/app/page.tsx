@@ -1,12 +1,11 @@
-import Nav from "@/components/Nav";
-import Spacing from "@/components/Spacing";
+import { Footer } from "@/components/Footer";
+import { Hero } from "@/components/Hero";
 
 export default function Home() {
   return (
     <main>
-      <Nav/>
-      <Spacing/>
-      
+      <Hero />
+      <Footer />
     </main>
   );
 }
