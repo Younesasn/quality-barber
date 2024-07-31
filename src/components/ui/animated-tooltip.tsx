@@ -44,7 +44,7 @@ export const AnimatedTooltip = ({
       {items.map((item, idx) => (
         <Link href={item.url} target="_blank">
           <div
-            className="-mr-4 relative group"
+            className="-mr-2 relative group"
             key={item.name}
             onMouseEnter={() => setHoveredIndex(item.id)}
             onMouseLeave={() => setHoveredIndex(null)}
