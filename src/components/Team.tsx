@@ -23,7 +23,7 @@ export default function Team() {
   };
 
   return (
-    <section className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <motion.h2
         className="text-balance bg-gradient-to-br from-30% bg-clip-text py-6 text-5xl font-medium leading-none tracking-tighter text-transparent from-white to-white/40 sm:text-3xl md:text-4xl lg:text-5xl text-center mb-4"
         ref={fadeInRef}
@@ -40,7 +40,7 @@ export default function Team() {
         Notre Team
       </motion.h2>
       <motion.div
-        className="md:flex flex-wrap justify-center space-y-8 md:space-y-0 md:justify-around"
+        className="md:flex flex-wrap justify-center space-y-8 md:space-y-0 md:justify-between"
         ref={fadeInRef}
         animate={fadeInInView ? "animate" : "initial"}
         variants={fadeUpVariants}
