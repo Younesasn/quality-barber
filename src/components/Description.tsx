@@ -1,7 +1,8 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 import { StickyScroll } from "./ui/sticky-scroll-reveal";
+import { motion, useInView } from "framer-motion";
 
 const content = [
   {
@@ -9,7 +10,7 @@ const content = [
     description:
       "Un salon de coiffure innovant et dynamique, vous accueille chaleureusement à Dunkerque. Avec une équipe de deux coiffeurs talentueux, nous vous offrons des prestations de qualité pour vous assurer une coupe de cheveux impeccable.",
     content: (
-      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+      <div className="h-full w-full flex items-center justify-center text-white">
         <Image
           src="/images/desc-1.jpg"
           width={300}
@@ -21,9 +22,9 @@ const content = [
     ),
   },
   {
-    title: "Real time changes",
+    title: "Précision et personnalisation",
     description:
-      "Notre ambiance amicale et conviviale vous mettra rapidement à l'aise, où vous pourrez passer un moment agréable en discutant avec notre équipe passionnée. La décoration urbaine et moderne du salon crée une atmosphère unique, propice à la détente et à la confiance",
+      "Nos spécialités incluent également la taille de la barbe, que ce soit avec des ciseaux experts ou un rasoir précis. Notre souci du détail et notre savoir-faire nous permettent de vous offrir un service personnalisé, en accord avec vos envies et vos besoins.",
     content: (
       <div className="h-full w-full flex items-center justify-center text-white">
         <Image
@@ -37,11 +38,11 @@ const content = [
     ),
   },
   {
-    title: "Version control",
+    title: "Expérience au rendez-vous",
     description:
       "Venez découvrir l'expérience Quality Barber, où vous serez entre de bonnes mains. Réservez dès maintenant votre rendez-vous dans notre salon de coiffure à Dunkerque et laissez-nous sublimer votre style.",
     content: (
-      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
+      <div className="h-full w-full flex items-center justify-center text-white">
         <Image
           src="/images/desc-3.jpg"
           width={300}
@@ -55,9 +56,36 @@ const content = [
 ];
 
 export default function Description() {
+  const fadeInRef = useRef(null);
+  const fadeInInView = useInView(fadeInRef, {
+    once: true,
+  });
+
+  const fadeUpVariants = {
+    initial: {
+      opacity: 0,
+      y: 24,
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+    },
+  };
   return (
-    <section className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-        <StickyScroll content={content} />
-    </section>
+    <motion.section
+      className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8"
+      ref={fadeInRef}
+      animate={fadeInInView ? "animate" : "initial"}
+      variants={fadeUpVariants}
+      initial={false}
+      transition={{
+        duration: 0.6,
+        delay: 0.1,
+        ease: [0.21, 0.47, 0.32, 0.98],
+        type: "spring",
+      }}
+    >
+      <StickyScroll content={content} />
+    </motion.section>
   );
 }
