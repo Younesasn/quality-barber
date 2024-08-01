@@ -3,7 +3,7 @@ import { motion, useInView } from "framer-motion";
 import { ParallaxScroll } from "./ui/parallax-scroll";
 import { useRef } from "react";
 
-export function Galery() {
+export function Gallery() {
   const fadeInRef = useRef(null);
   const fadeInInView = useInView(fadeInRef, {
     once: true,
@@ -21,15 +21,15 @@ export function Galery() {
   };
 
   const images = [
-    "/images/galery/galery-1.jpg",
-    "/images/galery/galery-2.jpg",
-    "/images/galery/galery-3.jpg",
-    "/images/galery/galery-4.jpg",
-    "/images/galery/galery-5.jpg",
-    "/images/galery/galery-6.jpg",
-    "/images/galery/galery-7.jpg",
-    "/images/galery/galery-8.jpg",
-    "/images/galery/galery-9.jpg",
+    "/images/gallery/gallery-1.jpg",
+    "/images/gallery/gallery-2.jpg",
+    "/images/gallery/gallery-3.jpg",
+    "/images/gallery/gallery-4.jpg",
+    "/images/gallery/gallery-5.jpg",
+    "/images/gallery/gallery-6.jpg",
+    "/images/gallery/gallery-7.jpg",
+    "/images/gallery/gallery-8.jpg",
+    "/images/gallery/gallery-9.jpg",
   ];
   return (
     <motion.div
@@ -39,7 +39,7 @@ export function Galery() {
       initial={false}
       transition={{
         duration: 0.6,
-        delay: 0.1,
+        delay: 0.4,
         ease: [0.21, 0.47, 0.32, 0.98],
         type: "spring",
       }}
