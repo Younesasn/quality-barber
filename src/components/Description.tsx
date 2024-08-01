@@ -3,12 +3,13 @@ import React, { useRef } from "react";
 import Image from "next/image";
 import { StickyScroll } from "./ui/sticky-scroll-reveal";
 import { motion, useInView } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 const content = [
   {
     title: "Quality Barber",
     description:
-      "Un salon de coiffure innovant et dynamique, vous accueille chaleureusement à Dunkerque. Avec une équipe de deux coiffeurs talentueux, nous vous offrons des prestations de qualité pour vous assurer une coupe de cheveux impeccable.",
+      "Un salon de coiffure innovant et dynamique, vous accueille chaleureusement à Dunkerque. Avec une équipe de trois coiffeurs talentueux, nous vous offrons des prestations de qualité pour vous assurer une coupe de cheveux impeccable.",
     content: (
       <div className="h-full w-full flex items-center justify-center text-white">
         <Image
