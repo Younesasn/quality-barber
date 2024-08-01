@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import Marquee from "@/components/magicui/marquee";
 import { buttonVariants } from "@/components/ui/button";
 import { ChevronRight, HeartHandshake } from "lucide-react";
+import Image from "next/image";
 
 const reviews = [
   {
@@ -65,7 +66,7 @@ const ReviewCard = ({
       )}
     >
       <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" width="32" height="32" alt="" src={img} />
+        <Image className="rounded-full" width="32" height="32" alt="" src={img} />
         <div className="flex flex-col">
           <figcaption className="text-sm font-medium text-white">
             {name}
@@ -135,7 +136,7 @@ export function CallToAction() {
               <HeartHandshake className="mx-auto size-16 text-white lg:size-24" />
             </div>
             <div className="z-10 mt-4 flex flex-col items-center text-center text-white">
-              <h1 className="text-3xl font-bold lg:text-4xl">Satisfait ?</h1>
+              <h2 className="text-3xl font-bold lg:text-4xl">Satisfait ?</h2>
               <p className="mt-2">
                 Ne tardez plus et prenez votre rendez-vous !
               </p>

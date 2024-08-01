@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import React, { useRef } from "react";
 import Marquee from "./magicui/marquee";
 import { motion, useInView } from "framer-motion";
+import Image from "next/image";
 
 export default function Testimonials() {
   const reviews = [
@@ -82,13 +83,7 @@ export default function Testimonials() {
         )}
       >
         <div className="flex flex-row items-center gap-2">
-          <img
-            className="rounded-full"
-            width="32"
-            height="32"
-            alt=""
-            src={img}
-          />
+          <Image className="rounded-full" width="32" height="32" alt="" src={img} />
           <div className="flex flex-col">
             <figcaption className="text-sm font-medium text-white">
               {name}

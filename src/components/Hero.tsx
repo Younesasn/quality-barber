@@ -59,7 +59,7 @@ export function Hero() {
                   type: "spring",
                 }}
               >
-                Salon de coiffure professionnelle & qualitative sur Dunkerque
+                Salon de coiffure professionnel & qualitatif sur Dunkerque
               </motion.p>
 
               <motion.div
