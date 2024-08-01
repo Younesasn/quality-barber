@@ -42,7 +42,7 @@ export const AnimatedTooltip = ({
   return (
     <>
       {items.map((item, idx) => (
-        <Link href={item.url} target="_blank">
+        <Link href={item.url} target="_blank" key={item.name}>
           <div
             className="-mr-2 relative group"
             key={item.name}
