@@ -74,7 +74,7 @@ export default function Team() {
         </div>
         <div className="flex flex-col items-center space-y-2">
           <Image
-            src={"/images/bacarus.jpg"}
+            src={"/images/bacaruus.jpg"}
             width={150}
             height={150}
             className="rounded-full border-2 border-white"
