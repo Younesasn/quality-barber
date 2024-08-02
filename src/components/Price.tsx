@@ -218,11 +218,11 @@ export default function Price() {
   };
   return (
     <motion.section id="faq">
-      <div className="py-14">
-        <div className="container mx-auto px-4 md:px-8">
+      <div className="py-10">
+        <div className="container mx-auto px-0">
           <div className="mx-auto max-w-5xl text-center">
             <motion.h2
-              className="text-balance bg-gradient-to-br from-30% bg-clip-text py-6 text-5xl font-medium leading-none tracking-tighter text-transparent from-white to-white/40 sm:text-3xl md:text-4xl lg:text-5xl text-center mb-4"
+              className="text-balance bg-gradient-to-br from-30% bg-clip-text py-6 font-medium leading-none tracking-tighter text-transparent from-white to-white/40 text-5xl text-center mb-4"
               ref={fadeInRef}
               animate={fadeInInView ? "animate" : "initial"}
               variants={fadeUpVariants}

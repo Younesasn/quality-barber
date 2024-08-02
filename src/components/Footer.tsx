@@ -34,7 +34,7 @@ export function Footer() {
     <footer className="max-w-5xl mx-auto flex flex-col gap-y-5 rounded-lg px-6 py-5">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-x-1">
-          <Image className="w-8 h-8 rounded-full" src="/images/qlt.jpg" alt="Quality Barber Logo" />
+          <Image className="w-8 h-8 rounded-full" src="/images/qlt.jpg" alt="Quality Barber Logo" width={100} height={100} />
           <h2 className="font-bold text-white">Quality Barber</h2>
         </div>
 
