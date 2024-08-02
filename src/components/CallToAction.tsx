@@ -10,37 +10,37 @@ const reviews = [
     name: "Jack",
     username: "@jack",
     body: "Salon agréable et barbers accueillants, coupe de qualité. Je recommandes !",
-    img: "https://avatar.vercel.sh/jack",
+    img: "/images/profil.jpg",
   },
   {
     name: "Jill",
     username: "@jill",
     body: "Super taille de barbe et coupe et masque de soins. Au top !",
-    img: "https://avatar.vercel.sh/jill",
+    img: "/images/profil.jpg",
   },
   {
     name: "John",
     username: "@john",
     body: "Rien à dire la coupe est belle je vais revenir. Et super accueil.",
-    img: "https://avatar.vercel.sh/john",
+    img: "/images/profil.jpg",
   },
   {
     name: "Jane",
     username: "@jane",
     body: "Super ambiance avec un travail irréprochable et un salon soigné. Si vous souhaitez joindre l'utile à l'agréable je recommandes à 100% ! 🔥",
-    img: "https://avatar.vercel.sh/jane",
+    img: "/images/profil.jpg",
   },
   {
     name: "Jenny",
     username: "@jenny",
     body: "L'équipe est accueillante et professionnelle. Mon barber a parfaitement compris ce que je voulais et le résultat est impeccable !",
-    img: "https://avatar.vercel.sh/jenny",
+    img: "/images/profil.jpg",
   },
   {
     name: "James",
     username: "@james",
     body: "Très accueillant ils coupent tous très bien je vous le conseille",
-    img: "https://avatar.vercel.sh/james",
+    img: "/images/profil.jpg",
   },
 ];
 
