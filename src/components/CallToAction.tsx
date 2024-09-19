@@ -1,9 +1,13 @@
+"use client";
+
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import Marquee from "@/components/magicui/marquee";
 import { buttonVariants } from "@/components/ui/button";
 import { ChevronRight, HeartHandshake } from "lucide-react";
+import { motion, useInView } from "framer-motion";
 import Image from "next/image";
+import { useRef } from "react";
 
 const reviews = [
   {
@@ -66,7 +70,14 @@ const ReviewCard = ({
       )}
     >
       <div className="flex flex-row items-center gap-2">
-        <Image className="rounded-full" width="32" height="32" alt="" src={img} />
+        <Image
+          loading="lazy"
+          className="rounded-full"
+          width="32"
+          height="32"
+          alt=""
+          src={img}
+        />
         <div className="flex flex-col">
           <figcaption className="text-sm font-medium text-white">
             {name}
@@ -80,8 +91,35 @@ const ReviewCard = ({
 };
 
 export function CallToAction() {
+  const fadeInRef = useRef(null);
+  const fadeInInView = useInView(fadeInRef, {
+    once: true,
+  });
+
+  const fadeUpVariants = {
+    initial: {
+      opacity: 0,
+      y: 24,
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+    },
+  };
   return (
-    <section id="cta">
+    <motion.section
+      id="cta"
+      ref={fadeInRef}
+      animate={fadeInInView ? "animate" : "initial"}
+      variants={fadeUpVariants}
+      initial={false}
+      transition={{
+        duration: 0.6,
+        delay: 0.6,
+        ease: [0.21, 0.47, 0.32, 0.98],
+        type: "spring",
+      }}
+    >
       <div className="py-14">
         <div className="container flex w-full flex-col items-center justify-center p-4">
           <div className="relative flex w-full max-w-[1000px] flex-col items-center justify-center overflow-hidden rounded-[2rem] border p-10 py-14">
@@ -159,6 +197,6 @@ export function CallToAction() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

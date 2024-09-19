@@ -33,7 +33,7 @@ export const ParallaxScroll = ({
       ref={gridRef}
     >
       <div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start max-w-5xl mx-auto gap-10 py-40 px-10"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start max-w-5xl mx-auto gap-10 py-40 max-lg:pt-3 max-lg:pb-0 px-10"
         ref={gridRef}
       >
         <div className="grid gap-10">
@@ -43,6 +43,7 @@ export const ParallaxScroll = ({
               key={"grid-1" + idx}
             >
               <Image
+                loading="lazy"
                 src={el}
                 className="h-80 w-full object-cover object-center gap-10 !m-0 !p-0 rounded-xl"
                 height="400"
@@ -56,6 +57,7 @@ export const ParallaxScroll = ({
           {secondPart.map((el, idx) => (
             <motion.div style={{ y: translateAlternative }} key={"grid-2" + idx}>
               <Image
+                loading="lazy"
                 src={el}
                 className="h-80 w-full object-cover object-center gap-10 !m-0 !p-0 rounded-xl"
                 height="400"
@@ -69,6 +71,7 @@ export const ParallaxScroll = ({
           {secondPart.map((el, idx) => (
             <motion.div style={{ y: translate }} key={"grid-2" + idx}>
               <Image
+                loading="lazy"
                 src={el}
                 className="h-80 w-full object-cover object-center gap-10 !m-0 !p-0 rounded-xl"
                 height="400"
@@ -82,6 +85,7 @@ export const ParallaxScroll = ({
           {thirdPart.map((el, idx) => (
             <motion.div style={{ y: translate }} key={"grid-3" + idx}>
               <Image
+                loading="lazy"
                 src={el}
                 className="h-80 w-full object-cover object-center gap-10 !m-0 !p-0 rounded-xl"
                 height="400"

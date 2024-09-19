@@ -76,7 +76,7 @@ export function Hero() {
               >
                 <a href="https://www.planity.com/quality-barber-59430-dunkerque" target="_blank" className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white from-white to-slate-900/10 lg:text-lg">
                   <ShimmerButton className="shadow-2xl">
-                    <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
+                    <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white lg:text-lg">
                       Rendez-vous sur Planity
                     </span>
                   </ShimmerButton>

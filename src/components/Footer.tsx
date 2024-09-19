@@ -34,7 +34,7 @@ export function Footer() {
     <footer className="max-w-5xl mx-auto flex flex-col gap-y-5 rounded-lg px-6 py-5">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-x-1">
-          <Image className="w-8 h-8 rounded-full" src="/images/qlt.jpg" alt="Quality Barber Logo" width={100} height={100} />
+          <Image className="w-8 h-8 rounded-full" src="/images/qlt.jpg" loading="lazy" alt="Quality Barber Logo" width={100} height={100} />
           <h2 className="font-bold text-white">Quality Barber</h2>
         </div>
 
@@ -55,7 +55,7 @@ export function Footer() {
           </p>
         </div>
         <div className="flex items-center justify-between text-sm font-medium tracking-tight text-neutral-400">
-          <p>Developed by <a href="https://you-dev.fr">You Dev</a></p>
+          <p>Developed by <a href="https://github.com/Younesasn" className="underline decoration-slice cursor-pointer">You Dev</a></p>
         </div>
       </div>
     </footer>

@@ -1,9 +1,8 @@
 "use client";
 import React, { useRef } from "react";
 import Image from "next/image";
-import { StickyScroll } from "./ui/sticky-scroll-reveal";
-import { motion, useInView } from "framer-motion";
-import { cn } from "@/lib/utils";
+import { useInView } from "framer-motion";
+import { FeatureSection } from "./magicui/feature";
 
 const content = [
   {
@@ -13,6 +12,7 @@ const content = [
     content: (
       <div className="h-full w-full flex items-center justify-center text-white">
         <Image
+          loading="lazy"
           src="/images/desc-1.jpg"
           width={300}
           height={300}
@@ -29,6 +29,7 @@ const content = [
     content: (
       <div className="h-full w-full flex items-center justify-center text-white">
         <Image
+          loading="lazy"
           src="/images/desc-2.jpg"
           width={300}
           height={300}
@@ -44,7 +45,8 @@ const content = [
       "Venez découvrir l'expérience Quality Barber, où vous serez entre de bonnes mains. Réservez dès maintenant votre rendez-vous dans notre salon de coiffure à Dunkerque et laissez-nous sublimer votre style.",
     content: (
       <div className="h-full w-full flex items-center justify-center text-white">
-        <Image
+        <Image 
+          loading="lazy"
           src="/images/desc-3.jpg"
           width={300}
           height={300}
@@ -73,20 +75,21 @@ export default function Description() {
     },
   };
   return (
-    <motion.section
-      className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8"
-      ref={fadeInRef}
-      animate={fadeInInView ? "animate" : "initial"}
-      variants={fadeUpVariants}
-      initial={false}
-      transition={{
-        duration: 0.6,
-        delay: 0.1,
-        ease: [0.21, 0.47, 0.32, 0.98],
-        type: "spring",
-      }}
-    >
-      <StickyScroll content={content} />
-    </motion.section>
+    // <motion.section
+    //   className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8"
+    //   ref={fadeInRef}
+    //   animate={fadeInInView ? "animate" : "initial"}
+    //   variants={fadeUpVariants}
+    //   initial={false}
+    //   transition={{
+    //     duration: 0.6,
+    //     delay: 0.1,
+    //     ease: [0.21, 0.47, 0.32, 0.98],
+    //     type: "spring",
+    //   }}
+    // >
+    //   <StickyScroll content={content} />
+    // </motion.section>
+    FeatureSection()
   );
 }

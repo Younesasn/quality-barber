@@ -20,7 +20,6 @@ export default function Home() {
       <Gallery />
       <Spacing />
       <Testimonials />
-      {/* <Spacing /> */}
       <Price />
       <CallToAction />
       <Spacing />

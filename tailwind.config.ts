@@ -103,6 +103,14 @@ const config = {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(calc(-100% - var(--gap)))" },
         },
+        "slide-down": {
+          from: { height: "0px" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "slide-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0px" },
+        },
         "marquee-vertical": {
           from: { transform: "translateY(0)" },
           to: { transform: "translateY(calc(-100% - var(--gap)))" },
@@ -112,6 +120,8 @@ const config = {
         "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
         "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
         "spin-around": "spin-around calc(var(--speed) * 2) infinite linear",
+        "slide-down": "slide-down 300ms cubic-bezier(0.87, 0, 0.13, 1)",
+        "slide-up": "slide-up 300ms cubic-bezier(0.87, 0, 0.13, 1)",
         slide: "slide var(--speed) ease-in-out infinite alternate",
         marquee: "marquee var(--duration) linear infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
