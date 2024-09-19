@@ -17,7 +17,6 @@ export const metadata: Metadata = {
     {rel: "icon", type:"image/png", sizes:"16x16" , url: "/favicon-16x16.png"},
     {rel: "mask-icon", url: "/safari-pinned-tab.svg", color: "#5bbad5"},
   ],
-  manifest: "/site.webmanifest",
   authors: [{name: "You-Dev", url: "https://github.com/Younesasn"}],
 };
 

@@ -32,6 +32,8 @@ const AccordionItem = forwardRef<HTMLDivElement, AccordionItemProps>(
   )
 );
 
+AccordionItem.displayName = "AccordionItem";
+
 type AccordionTriggerProps = {
   children: React.ReactNode;
   className?: string;
@@ -54,6 +56,8 @@ const AccordionTrigger = forwardRef<HTMLButtonElement, AccordionTriggerProps>(
   )
 );
 
+AccordionTrigger.displayName = "AccordionTrigger";
+
 type AccordionContentProps = {
   children: ReactNode;
   className?: string;
@@ -73,6 +77,8 @@ const AccordionContent = forwardRef<HTMLDivElement, AccordionContentProps>(
     </Accordion.Content>
   )
 );
+
+AccordionContent.displayName = "AccordionContent";
 
 type CardDataProps = {
   id: number;
