@@ -266,7 +266,7 @@ const Feature = ({
                     value={`item-${index}`}
                   >
                     <div
-                      className={`absolute bottom-0 top-0 h-full w-0.5 overflow-hidden rounded-lg bg-neutral-300/50 ${
+                      className={`absolute bottom-0 top-0 h-full w-0.5 overflow-hidden rounded-lg bg-neutral-400/50 ${
                         linePosition === "right"
                           ? "left-auto right-0"
                           : "left-0 right-auto"
@@ -338,11 +338,11 @@ const Feature = ({
                     scrollSnapAlign: "center",
                   }}
                 >
-                  <div className="absolute bottom-0 left-0 right-auto top-0 h-0.5 w-full overflow-hidden rounded-lg bg-neutral-300/50 ">
+                  <div className="absolute bottom-0 left-0 right-auto top-0 h-0.5 w-full overflow-hidden rounded-lg bg-neutral-400/50 ">
                     <div
                       className={`absolute left-0 top-0 h-full ${
                         currentIndex === index ? "w-full" : "w-0"
-                      } origin-top bg-neutral-500 transition-all ease-linear`}
+                      } origin-top bg-white transition-all ease-linear`}
                       style={{
                         transitionDuration:
                           currentIndex === index ? `${collapseDelay}ms` : "0s",
