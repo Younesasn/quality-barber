@@ -79,7 +79,7 @@ export default function Team() {
           type: "spring",
         }}
       >
-        {teams.map((team) => (
+        {teams.map((team, key) => (
           <div className="flex flex-col items-center space-y-2">
             <Image
               loading="lazy"
