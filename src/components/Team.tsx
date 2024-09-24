@@ -22,6 +22,33 @@ export default function Team() {
     },
   };
 
+  const teams = [
+    {
+      name: "Lawni",
+      role: "CEO & Barber",
+      image: "/images/laou.jpg",
+      instagram: "https://www.instagram.com/lawni_barber/",
+    },
+    {
+      name: "Bacaruus",
+      role: "Barber",
+      image: "/images/bacaruus.jpg",
+      instagram: "https://www.instagram.com/bacaruusbarber/",
+    },
+    {
+      name: "Fdsstyle",
+      role: "Barber",
+      image: "/images/fdsstyle.jpg",
+      instagram: "https://www.instagram.com/fdsstyle/",
+    },
+    {
+      name: "Mouns",
+      role: "Hair Dresser",
+      image: "/images/braidbymouns.jpg",
+      instagram: "https://www.instagram.com/braidbymouns/",
+    },
+  ];
+
   return (
     <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <motion.h2
@@ -52,69 +79,29 @@ export default function Team() {
           type: "spring",
         }}
       >
-        <div className="flex flex-col items-center space-y-2">
-          <Image
-            loading="lazy"
-            src={"/images/laou.jpg"}
-            width={150}
-            height={150}
-            className="rounded-full border-2 border-white"
-            alt="Laouny"
-          />
-          <div className="text-center">
-            <h2 className="text-2xl font-bold">Lawni</h2>
-            <p className="text-gray-600 text-lg">CEO & Barber</p>
-            <Link
-              href="https://www.instagram.com/lawni_barber/"
-              target="_blank"
-              className="flex items-center justify-center"
-            >
-              <InstagramLogoIcon className="w-6 h-6" />
-            </Link>
+        {teams.map((team) => (
+          <div className="flex flex-col items-center space-y-2">
+            <Image
+              loading="lazy"
+              src={team.image}
+              width={150}
+              height={150}
+              className="rounded-full border-2 border-white"
+              alt={team.name}
+            />
+            <div className="text-center">
+              <h2 className="text-2xl font-bold">{team.name}</h2>
+              <p className="text-gray-600 text-lg">{team.role}</p>
+              <Link
+                href={team.instagram}
+                target="_blank"
+                className="flex items-center justify-center"
+              >
+                <InstagramLogoIcon className="w-6 h-6 mt-2" />
+              </Link>
+            </div>
           </div>
-        </div>
-        <div className="flex flex-col items-center space-y-2">
-          <Image
-            loading="lazy"
-            src={"/images/bacaruus.jpg"}
-            width={150}
-            height={150}
-            className="rounded-full border-2 border-white"
-            alt="Bacaruus"
-          />
-          <div className="text-center">
-            <h2 className="text-2xl font-bold">Bacaruus</h2>
-            <p className="text-gray-600 text-lg">Barber</p>
-            <Link
-              href="https://www.instagram.com/bacaruusbarber/"
-              target="_blank"
-              className="flex items-center justify-center"
-            >
-              <InstagramLogoIcon className="w-6 h-6" />
-            </Link>
-          </div>
-        </div>
-        <div className="flex flex-col items-center space-y-2">
-          <Image
-            src={"/images/fdsstyle.jpg"}
-            width={150}
-            height={150}
-            loading="lazy"
-            className="rounded-full border-2 border-white"
-            alt="Fdsstyle"
-          />
-          <div className="text-center">
-            <h2 className="text-2xl font-bold">Fdsstyle</h2>
-            <p className="text-gray-600 text-lg">Barber</p>
-            <Link
-              href="https://www.instagram.com/fdsstyle/"
-              target="_blank"
-              className="flex items-center justify-center"
-            >
-              <InstagramLogoIcon className="w-6 h-6" />
-            </Link>
-          </div>
-        </div>
+        ))}
       </motion.div>
     </section>
   );
