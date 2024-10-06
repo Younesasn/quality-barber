@@ -36,12 +36,6 @@ export default function Team() {
       instagram: "https://www.instagram.com/bacaruusbarber/",
     },
     {
-      name: "Fdsstyle",
-      role: "Barber",
-      image: "/images/fdsstyle.jpg",
-      instagram: "https://www.instagram.com/fdsstyle/",
-    },
-    {
       name: "Mouns",
       role: "Hair Dresser",
       image: "/images/braidbymouns.jpg",
