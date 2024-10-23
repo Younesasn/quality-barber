@@ -90,6 +90,6 @@ export default function Description() {
     // >
     //   <StickyScroll content={content} />
     // </motion.section>
-    FeatureSection()
+    (FeatureSection())
   );
 }

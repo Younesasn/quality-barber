@@ -7,6 +7,8 @@ import {
   TwitterLogoIcon,
 } from "@radix-ui/react-icons";
 
+import type { JSX } from "react";
+
 interface Icon {
   icon: JSX.Element;
   url: string;
