@@ -23,13 +23,13 @@ const people = [
     image: "/images/bacaruus.jpg",
     url: "https://www.instagram.com/bacaruusbarber/",
   },
-  {
-    id: 4,
-    name: "HairMaxx",
-    designation: "Barber",
-    image: "/images/hairmaxx.jpg",
-    url: "https://www.instagram.com/hairmaxx_/",
-  },
+  // {
+  //   id: 4,
+  //   name: "HairMaxx",
+  //   designation: "Barber",
+  //   image: "/images/hairmaxx.jpg",
+  //   url: "https://www.instagram.com/hairmaxx_/",
+  // },
   {
     id: 5,
     name: "Mouns",

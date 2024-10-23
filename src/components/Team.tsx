@@ -35,12 +35,12 @@ export default function Team() {
       image: "/images/bacaruus.jpg",
       instagram: "https://www.instagram.com/bacaruusbarber/",
     },
-    {
-      name: "HairMaxx",
-      role: "Barber",
-      image: "/images/hairmaxx.jpg",
-      instagram: "https://www.instagram.com/hairmaxx_/",
-    },
+    // {
+    //   name: "HairMaxx",
+    //   role: "Barber",
+    //   image: "/images/hairmaxx.jpg",
+    //   instagram: "https://www.instagram.com/hairmaxx_/",
+    // },
     {
       name: "Mouns",
       role: "Hair Dresser",
