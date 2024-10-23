@@ -91,11 +91,6 @@ const ReviewCard = ({
 };
 
 export function CallToAction() {
-  const fadeInRef = useRef(null);
-  const fadeInInView = useInView(fadeInRef, {
-    once: true,
-  });
-
   const fadeUpVariants = {
     initial: {
       opacity: 0,
@@ -108,9 +103,8 @@ export function CallToAction() {
   };
   return (
     <motion.section
-      id="cta"
-      ref={fadeInRef}
-      animate={fadeInInView ? "animate" : "initial"}
+      ref={null}
+      animate={"animate"}
       variants={fadeUpVariants}
       initial={false}
       transition={{
