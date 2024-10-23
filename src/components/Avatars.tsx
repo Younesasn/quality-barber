@@ -25,7 +25,7 @@ const people = [
   },
   {
     id: 4,
-    name: "Hairmaxx",
+    name: "HairMaxx",
     designation: "Barber",
     image: "/images/hairmaxx.jpg",
     url: "https://www.instagram.com/hairmaxx_/",
