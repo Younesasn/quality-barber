@@ -78,7 +78,7 @@ export default function Testimonials() {
     return (
       <figure
         className={cn(
-          "relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
+          "relative w-64 overflow-hidden rounded-xl border p-4",
           "border-gray-50/[.1] bg-gray-50/[.10] hover:bg-gray-50/[.15]"
         )}
       >

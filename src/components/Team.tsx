@@ -36,6 +36,12 @@ export default function Team() {
       instagram: "https://www.instagram.com/bacaruusbarber/",
     },
     {
+      name: "HairMaxx",
+      role: "Barber",
+      image: "/images/hairmaxx.jpg",
+      instagram: "https://www.instagram.com/hairmaxx_/",
+    },
+    {
       name: "Mouns",
       role: "Hair Dresser",
       image: "/images/braidbymouns.jpg",
@@ -46,7 +52,7 @@ export default function Team() {
   return (
     <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <motion.h2
-        className="text-balance bg-gradient-to-br from-30% bg-clip-text py-6 text-5xl font-medium leading-none tracking-tighter text-transparent from-white to-white/40 sm:text-3xl md:text-4xl lg:text-5xl text-center mb-4"
+        className="text-balance bg-gradient-to-br from-30% bg-clip-text py-6 text-5xl font-medium leading-none tracking-tighter text-transparent from-white to-white/40 sm:text-3xl md:text-4xl lg:text-5xl text-center mb-10"
         ref={fadeInRef}
         animate={fadeInInView ? "animate" : "initial"}
         variants={fadeUpVariants}
@@ -85,7 +91,7 @@ export default function Team() {
             />
             <div className="text-center">
               <h2 className="text-2xl font-bold">{team.name}</h2>
-              <p className="text-gray-600 text-lg">{team.role}</p>
+              <p className="text-neutral-400 text-lg">{team.role}</p>
               <Link
                 href={team.instagram}
                 target="_blank"

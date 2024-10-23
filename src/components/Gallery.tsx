@@ -21,7 +21,7 @@ export function Gallery() {
   };
 
   const images = [
-    "/images/gallery/gallery-1.jpg",
+    "/images/gallery/gallery-1.png",
     "/images/gallery/gallery-2.jpg",
     "/images/gallery/gallery-3.jpg",
     "/images/gallery/gallery-4.jpg",
@@ -29,7 +29,7 @@ export function Gallery() {
     "/images/gallery/gallery-6.jpg",
     "/images/gallery/gallery-7.jpg",
     "/images/gallery/gallery-8.jpg",
-    "/images/gallery/gallery-9.jpg",
+    "/images/gallery/gallery-9.png",
   ];
   return (
     <motion.div

@@ -25,10 +25,17 @@ const people = [
   },
   {
     id: 4,
-    name: "Fdsstyle",
+    name: "Hairmaxx",
     designation: "Barber",
-    image: "/images/fdsstyle.jpg",
-    url: "https://www.instagram.com/fdsstyle/",
+    image: "/images/hairmaxx.jpg",
+    url: "https://www.instagram.com/hairmaxx_/",
+  },
+  {
+    id: 5,
+    name: "Mouns",
+    designation: "Hair Dresser",
+    image: "/images/braidbymouns.jpg",
+    url: "https://www.instagram.com/braidbymouns/",
   },
 ];
 
