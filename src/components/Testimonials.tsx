@@ -45,10 +45,8 @@ export default function Testimonials() {
     },
   ];
 
-  const fadeInRef = useRef(null);
-  const fadeInInView = useInView(fadeInRef, {
-    once: true,
-  });
+  const fadeInRef = useRef<HTMLDivElement>(null);
+  const fadeInInView = useInView(fadeInRef as unknown as React.RefObject<Element>, { once: true });
 
   const fadeUpVariants = {
     initial: {

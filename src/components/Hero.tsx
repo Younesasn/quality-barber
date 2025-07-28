@@ -8,10 +8,8 @@ import { useRef } from "react";
 import ShimmerButton from "./magicui/shimmer-button";
 
 export function Hero() {
-  const fadeInRef = useRef(null);
-  const fadeInInView = useInView(fadeInRef, {
-    once: true,
-  });
+  const fadeInRef = useRef<HTMLDivElement>(null);
+  const fadeInInView = useInView(fadeInRef as unknown as React.RefObject<Element>, { once: true });
 
   const fadeUpVariants = {
     initial: {

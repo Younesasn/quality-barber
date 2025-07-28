@@ -59,21 +59,21 @@ const content = [
 ];
 
 export default function Description() {
-  // const fadeInRef = useRef(null);
-  // const fadeInInView = useInView(fadeInRef, {
-  //   once: true,
-  // });
+  const fadeInRef = useRef<HTMLDivElement>(null);
+  const fadeInInView = useInView(fadeInRef as unknown as React.RefObject<Element>, {
+    once: true,
+  });
 
-  // const fadeUpVariants = {
-  //   initial: {
-  //     opacity: 0,
-  //     y: 24,
-  //   },
-  //   animate: {
-  //     opacity: 1,
-  //     y: 0,
-  //   },
-  // };
+  const fadeUpVariants = {
+    initial: {
+      opacity: 0,
+      y: 24,
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+    },
+  };
   return (
     // <motion.section
     //   className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8"

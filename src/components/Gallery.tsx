@@ -4,10 +4,11 @@ import { ParallaxScroll } from "./ui/parallax-scroll";
 import { useRef } from "react";
 
 export function Gallery() {
-  const fadeInRef = useRef(null);
-  const fadeInInView = useInView(fadeInRef, {
-    once: true,
-  });
+  const fadeInDivRef = useRef<HTMLDivElement>(null);
+  const fadeInDivInView = useInView(fadeInDivRef as unknown as React.RefObject<Element>, { once: true });
+
+  const fadeInH2Ref = useRef<HTMLHeadingElement>(null);
+  const fadeInH2InView = useInView(fadeInH2Ref as unknown as React.RefObject<Element>, { once: true });
 
   const fadeUpVariants = {
     initial: {
@@ -33,8 +34,8 @@ export function Gallery() {
   ];
   return (
     <motion.div
-      ref={fadeInRef}
-      animate={fadeInInView ? "animate" : "initial"}
+      ref={fadeInDivRef}
+      animate={fadeInDivInView ? "animate" : "initial"}
       variants={fadeUpVariants}
       initial={false}
       transition={{
@@ -44,10 +45,10 @@ export function Gallery() {
         type: "spring",
       }}
     >
-      <motion.h2
+      <motion.div
         className="text-balance bg-gradient-to-br from-30% bg-clip-text py-6 text-5xl font-medium leading-none tracking-tighter text-transparent from-white to-white/40 sm:text-3xl md:text-4xl lg:text-5xl text-center mb-4"
-        ref={fadeInRef}
-        animate={fadeInInView ? "animate" : "initial"}
+        ref={fadeInDivRef}
+        animate={fadeInDivInView ? "animate" : "initial"}
         variants={fadeUpVariants}
         initial={false}
         transition={{
@@ -58,7 +59,7 @@ export function Gallery() {
         }}
       >
         Nos Réalisations
-      </motion.h2>
+      </motion.div>
       <ParallaxScroll images={images} />
     </motion.div>
   );
